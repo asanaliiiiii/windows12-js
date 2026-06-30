@@ -1,29 +1,54 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="zh-CN"> <!-- Изменили на zh-CN или ru, смотря на какую аудиторию упор -->
 <head>
     <meta charset="UTF-8">
-	<link rel="shortcut icon" href="./logo.svg" type="image/x-icon">
-    <title>Windows 12 网页版</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./logo.svg" type="image/x-icon">
+    
+    <!-- Ключевые слова для поисковиков -->
+    <title>Windows 12 网页版 | Web Edition | Симулятор ОС онлайн</title>
+    <meta name="description" content="在线体验 Windows 12 网页版概念 OS。Полноценный симулятор Windows 12 в вашем браузере. Try Windows 12 web edition online.">
+    <meta name="keywords" content="Windows 12, Windows 12 网页版, win12 online, симулятор windows 12, web os">
+
     <style>
-        
         html, body {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
             overflow: hidden; 
+            background-color: #000;
         }
 
-        
         iframe {
             width: 100%;
             height: 100%;
             border: none;
             display: block; 
+            position: relative;
+            z-index: 2; /* Поверх текста */
+        }
+
+        /* Скрытый для пользователя, но видимый для поисковых роботов текст */
+        .seo-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1; /* Под iframe */
+            color: #fff;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
+
+    <!-- Роботы Google и Yandex увидят этот текст и проиндексируют сайт по нужным запросам -->
+    <main class="seo-text">
+        <h1>Windows 12 网页版 (Web Edition)</h1>
+        <p>Добро пожаловать в концепт операционной системы Windows 12 онлайн. В этой веб-версии вы можете протестировать интерфейс будущей ОС.</p>
+        <p>欢迎来到 Windows 12 网页版概念系统。这是一个基于网页技术的 Win12 模拟器，让你在浏览器中.体验未来的 ОS。</p>
+        <p>Experience the future Windows 12 concept directly in your web browser. Online simulation with beautiful UI.</p>
+    </main>
 
     <iframe src="https://naxcloud-w12.pages.dev/desktop"></iframe>
 
